@@ -38,7 +38,7 @@ useEffect(() => {
 
   // ✅ LOGIN (JSON)
   const login = async (email: string, password: string) => {
-    const res = await fetch("http://localhost:8000/auth/login", {
+    const res = await fetch("https://lakshya-ai-backend.onrender.com/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -65,7 +65,7 @@ useEffect(() => {
 
   // ✅ SIGNUP (JSON)
   const signup = async (name: string, email: string, password: string) => {
-    const res = await fetch("http://localhost:8000/auth/register", {
+    const res = await fetch("https://lakshya-ai-backend.onrender.com/auth/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -62,7 +62,7 @@ export default function HistoryPage() {
     try {
       setLoading(true);
 
-      const res = await axios.get('http://localhost:8000/history', {
+      const res = await axios.get('https://lakshya-ai-backend.onrender.com/history', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -115,7 +115,7 @@ export default function HistoryPage() {
   // ✅ DELETE
   const deleteItem = async (id: string) => {
     try {
-      await axios.delete(`http://localhost:8000/history/${id}`, {
+      await axios.delete(`https://lakshya-ai-backend.onrender.com/history/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },

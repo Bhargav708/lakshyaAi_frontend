@@ -47,7 +47,7 @@ export default function QuizPage() {
         const formData = new FormData();
         formData.append('file', pdfFile);
 
-        res = await fetch('http://localhost:8000/quiz/upload-pdf', {
+        res = await fetch('https://lakshya-ai-backend.onrender.com/quiz/upload-pdf', {
           method: 'POST',
           body: formData,
           headers: {
@@ -55,7 +55,7 @@ export default function QuizPage() {
           },
         });
       } else {
-        res = await fetch('http://localhost:8000/quiz/generate', {
+        res = await fetch('https://lakshya-ai-backend.onrender.com/quiz/generate', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -104,7 +104,7 @@ export default function QuizPage() {
   // =========================
   const submitQuiz = async () => {
     try {
-      const res = await fetch('http://localhost:8000/quiz/submit', {
+      const res = await fetch('https://lakshya-ai-backend.onrender.com/quiz/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

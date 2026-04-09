@@ -49,7 +49,7 @@ export default function PDFChatAssistant() {
     formData.append("file", f);
 
     try {
-      const res = await fetch("http://localhost:8000/pdf/upload", {
+      const res = await fetch("https://lakshya-ai-backend.onrender.com/pdf/upload", {
         method: "POST",
         body: formData,
         headers: {
@@ -99,7 +99,7 @@ export default function PDFChatAssistant() {
     setQuestion("");
 
     try {
-      const res = await fetch("http://localhost:8000/pdf/chat", {
+      const res = await fetch("https://lakshya-ai-backend.onrender.com/pdf/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
